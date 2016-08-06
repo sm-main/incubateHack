@@ -1,0 +1,159 @@
+header
+{
+  top: 0px;
+  /*padding-top: 30px;*/
+  height: 75px;
+  background-color: #333745;
+}
+.chips
+{
+  padding-top: 30px;
+}
+header > .container
+{
+  position: relative;
+  text-align: center;
+}
+.button-collapse
+{
+  position: absolute;
+  left: 0px;
+  /*top: -10px;*/
+}
+.container-sub-header
+{
+  text-align: center;padding-top: 25px;
+}
+.our-logo
+{
+  margin: 0 auto;
+  color: #fff;
+  display: inline-block;
+}
+.material-icons
+{
+  color: #fff;
+}
+.bottom-next-button
+{
+  position: absolute;
+  background-color: #84DCC6;
+  bottom: 0px;
+    width: 100%;
+}
+.profile-edit-header
+{
+  padding-top: 20px;
+  height: 200px;
+  text-align: center;
+}
+.profile-edit-image
+{
+  margin-top: 20px;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  display: inline-block;
+}
+label
+{
+  font-weight: bold;
+}
+.active
+{
+  font-weight: bold;
+  font-size: 1rem!important;
+}
+.form-starts
+{
+  padding-top: 20px;
+}
+.back-btn
+{
+  position: absolute;
+left: 0px;
+top: 70px;
+}
+.edit-profile-span
+{
+  font-style: italic;
+  color: #fff;
+  letter-spacing: 1px;
+}
+/*home page*/
+#home-section
+{
+  height: 100vh;
+  background: url("../images/uncle.png") no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-position: 60%;
+	background-size: cover;
+	border-bottom: 7px solid #252525;
+	width: 100%;
+  opacity: .7;
+  /*background: black;*/
+}
+.signup-button,
+.login-button
+{
+  width: 50%;
+  display: inline-block;
+  float: left;
+  bottom: 0px;
+}
+
+.signup-button
+{
+  background-color: #FE5F55;
+}
+.button-container
+{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  overflow: hidden;
+}
+.first-h5
+{
+  color: #fff;
+}
+.all-blog-h5
+{
+  margin-top: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.card-title
+{
+  color: black!important;
+
+}
+.card-image img
+{
+  opacity: .5;
+  height: 300px;
+}
+.card-action
+{
+  overflow: hidden;
+}
+.full-article-btn,
+.summary-btn
+{
+  float: left;
+  width: 50%;
+}
+.fixed-action-btn
+{
+  padding-bottom: 10px!important;
+  position: relative;
+  bottom: 0px!important;
+  right: 0px!important;
+}
+.fixed-action-btn.horizontal ul
+{
+  top: 10px;
+  right: 0px!important;
+}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block body %}
+<!-- <div class="chips"></div> -->
+<div class="container">
+  <h5>Please select your interest.</h5>
+   <div class="chips chips-initial"></div>
+</div>
+
+ <!-- <div class="chips chips-placeholder"></div> -->
+
+<div class="bottom-button">
+  <a class="waves-effect waves-light btn bottom-next-button">next</a>
+</div>
+{% endblock body %}
+
+{% block scripts %}
+  {{ block.super }}
+  <script>
+
+  $('.chips').material_chip();
+  $('.chips-initial').material_chip({
+    data: [{
+      tag: 'Apple',
+    }, {
+      tag: 'Microsoft',
+    }, {
+      tag: 'Google',
+    }],
+  });
+  $('.chips-placeholder').material_chip({
+    placeholder: 'Enter a tag',
+    secondaryPlaceholder: '+Tag',
+  });
+
+  </script>
+{% endblock scripts %}

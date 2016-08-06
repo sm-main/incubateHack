@@ -24,7 +24,7 @@
         <div class="col s12 m7">
           <div class="card">
             <div class="card-image">
-              <img src="{% static 'images/blog_img1.jpg' %}">
+              <a href="{% url 'blog_detail_page' %}"><img src="{% static 'images/blog_img1.jpg' %}"></a>
               <span class="card-title">How to make good decisions.</span>
             </div>
             <div class="card-content">
@@ -44,10 +44,64 @@
               </div>
             </div>
             <div class="card-action">
-              <a class="waves-effect waves-light btn full-article-btn">Full blog</a>
-              <a class="waves-effect waves-light btn summary-btn">Summary</a>
+              <a class="waves-effect waves-light btn full-article-btn" href="{% url 'blog_detail_page' %}">Full blog</a>
+              <a class="waves-effect waves-light btn summary-btn modal-trigger" href="#modal1">Summary</a>
+            </div>
+          </div>
+        </div>
+
+       <!-- Modal Structure -->
+       <!-- <div id="modal1" class="modal">
+         <div class="modal-content">
+           <h4>Modal Header</h4>
+           <p>A bunch of text</p>
+         </div>
+         <div class="modal-footer">
+           <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+         </div>
+       </div>
+      </div> -->
+
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <a href="{% url 'blog_detail_page' %}"><img src="{% static 'images/blog_img1.jpg' %}"></a>
+              <span class="card-title">How to make good decisions.</span>
+            </div>
+            <div class="card-content">
+              <p>By Daniel Newman, CEO, Broadsuite Media Group</p>
+            </div>
+            <div>
+              <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large red" style="width:38px; height:38px;">
+                  <i class="material-icons" style="line-height:35px;" >add</i>
+                </a>
+                <ul>
+                  <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                  <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                  <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                  <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-action">
+
+              <a class="waves-effect waves-light btn full-article-btn" href="{% url 'blog_detail_page' %}">Full blog</a>
+              <a class="waves-effect waves-light btn summary-btn modal-trigger" href="#modal1">Summary</a>
 
             </div>
+          </div>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h5>How to make good decisions(Summary)</h5>
+            <p> In the end, artificial intelligence back then was a lot of experimentation between what data sets to test, what algorithms to apply, what parameters to configure, and how to best program them to get better performance.Are you Ready to Experiment with AI and Machine Learning?I've been fortunate to have had some opportunities to develop artificial intelligence in business applications.I've developed or led teams to develop tools that enable comparing genetic and protein samples, natural language processing algorithms to extract search terms from newspaper classified advertisements, and document processing techniques for extracting building material names from construction blue prints and building specifications.
+* What was common across all three applications is that it required significant experimentation, first to get the basic algorithm in place and then later to build up more intelligence to handle more disparate use cases with increasing quality and performance.Is AI Today Fundamentally Easier?The simple answer is yes, but the longer answer may be no.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
         </div>
       </div>
@@ -56,7 +110,7 @@
         <div class="col s12 m7">
           <div class="card">
             <div class="card-image">
-              <img src="{% static 'images/blog_img1.jpg' %}">
+              <a href="{% url 'blog_detail_page' %}"><img src="{% static 'images/blog_img1.jpg' %}"></a>
               <span class="card-title">How to make good decisions.</span>
             </div>
             <div class="card-content">
@@ -77,40 +131,7 @@
             </div>
             <div class="card-action">
 
-              <a class="waves-effect waves-light btn full-article-btn">Full blog</a>
-              <a class="waves-effect waves-light btn summary-btn">Summary</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12 m7">
-          <div class="card">
-            <div class="card-image">
-              <img src="{% static 'images/blog_img1.jpg' %}">
-              <span class="card-title">How to make good decisions.</span>
-            </div>
-            <div class="card-content">
-              <p>By Daniel Newman, CEO, Broadsuite Media Group</p>
-            </div>
-            <div>
-              <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
-                <a class="btn-floating btn-large red" style="width:38px; height:38px;">
-                  <i class="material-icons" style="line-height:35px;" >add</i>
-                </a>
-                <ul>
-                  <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-                  <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-                  <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-                  <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-action">
-
-              <a class="waves-effect waves-light btn full-article-btn">Full blog</a>
+              <a class="waves-effect waves-light btn full-article-btn" href="{% url 'blog_detail_page' %}">Full blog</a>
               <a class="waves-effect waves-light btn summary-btn">Summary</a>
 
             </div>
@@ -127,7 +148,11 @@
   <script>
 
       //  $('.fixed-action-btn').openFAB();
-
+      $(document).ready(function(){
+       // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+       $('.modal-trigger').leanModal();
+      //  $('.modal-trigger-signup').leanModal();
+     });
 
   </script>
 {% endblock scripts %}

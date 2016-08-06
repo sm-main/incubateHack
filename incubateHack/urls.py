@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^$', 'general.views.home_page', name='home_page'),
     url(r'^sign-up-page2/$', 'general.views.sign_up_page2', name="sign_up_page2"),
     url(r'^profile-edit/$', 'general.views.profile_edit_page', name='profile_edit_page'),
-    url(r'^all-blog/$', 'general.views.all_blog_page', name='all_blog_page')
+    url(r'^all-blog/$', 'general.views.all_blog_page', name='all_blog_page'),
+    url(r'^blog-detail-page/$', 'general.views.blog_detail_page', name='blog_detail_page')
 ]

@@ -13,3 +13,6 @@ def profile_edit_page(request):
 
 def all_blog_page(request):
     return render(request, 'all_blog_page.html')
+
+def blog_detail_page(request):
+    return render(request, 'blog_detail_page.html')

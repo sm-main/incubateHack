@@ -2,11 +2,20 @@
 {% load staticfiles %}
 
 
+
 {% block body %}
 
 <section id="act-now-page">
   <div class="container">
-    
+    <h5>Tasks to be taken after reading</h5>
+    <div class="row">
+      <div class="input-field col s6">
+        <input value="" id="first_name2" type="text" class="validate" placeholder="add any of your tasks here">
+        <label class="active" for="first_name2">First Name</label>
+      </div>
+    </div>
+    <input type="date" class="datepicker">
+    <a class="btn" onclick="Materialize.toast('Your Task is added successfully', 4000,'',function(){})">Add Your task!</a>
   </div>
 </section>
 

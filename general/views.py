@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from reportlab.pdfgen import canvas
+from django.http import HttpResponse
 # Create your views here.
 
 def home_page(request):
@@ -30,4 +31,4 @@ def community_view(request):
     return render(request, 'community_view.html')
 
 def community_single_page(request):
-    return render(request, 'community_single_page.html')    
+    return render(request, 'community_single_page.html')

@@ -95,15 +95,15 @@ top: 70px;
 #home-section
 {
   height: 100vh;
-  background: url("../images/uncle.png") no-repeat;
+  background: url("../images/uncle2.png") no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-position: 60%;
+	background-position: 50%;
 	background-size: cover;
 	border-bottom: 7px solid #252525;
 	width: 100%;
-  opacity: .7;
+
   /*background: black;*/
 }
 .signup-button,
@@ -114,10 +114,13 @@ top: 70px;
   float: left;
   bottom: 0px;
 }
-
+.login-button
+{
+  background-color: #929c9b!important;
+}
 .signup-button
 {
-  background-color: #FE5F55!important;
+  background-color: #ea908a!important;
 }
 .submit-button-signup,
 .submit-button-login
@@ -194,10 +197,10 @@ top: 70px;
    top: 10px;
    right: 0px!important;
  }
-#my-strong-id
+/*#my-strong-id
  {
    right:35px!important;
- }
+ }*/
 .blog-detail-btn-wrapper > .fixed-action-btn
 {
   text-align: right;

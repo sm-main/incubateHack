@@ -21,7 +21,7 @@
  <div id="modal1" class="modal">
    <div class="modal-content">
     <div class="row">
-      <form class="">
+      <form class="{% url 'sign_up_page2' %}">
         <div class="row">
           <div class="input-field">
             <input id="email" type="email" class="validate">
@@ -34,7 +34,7 @@
             <label for="password">Password</label>
           </div>
         </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <button class="btn waves-effect waves-light submit-button-login" type="submit">Submit
           <i class="material-icons right">send</i>
         </button>
       </form>
@@ -46,7 +46,7 @@
  <div id="modal2" class="modal">
    <div class="modal-content">
     <div class="row">
-      <form class="">
+      <form class="" action="{% url 'sign_up_page2' %}">
         <div class="row">
           <div class="input-field">
             <input id="email" type="email" class="validate">
@@ -65,7 +65,7 @@
             <label for="password">Confirm Password</label>
           </div>
         </div>
-        <a class="btn waves-effect waves-light" type="submit" herf="{% url 'sign_up_page2' %}" name="action">Submit
+        <a class="btn waves-effect waves-light submit-button-signup" type="submit" herf="{% url 'sign_up_page2' %}" name="action">Submit
           <i class="material-icons right">send</i>
         </a>
       </form>
@@ -92,9 +92,17 @@
   $(document).ready(function(){
    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
    $('.modal-trigger').leanModal();
-  //  $('.modal-trigger-signup').leanModal();
+  $('.modal-trigger-signup').leanModal();
  });
 
   windowH();
+  $('.submit-button-signup').on('click', function(e){
+    e.preventDefault();
+     window.location.href = '/sign-up-page2/';
+  });
+  $('.submit-button-login').on('click', function(e){
+    e.preventDefault();
+    window.location.href = '/all-blog/';
+  });
   </script>
 {% endblock scripts %}

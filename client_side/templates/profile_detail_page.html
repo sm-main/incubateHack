@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block stylesheet %}
+{{ block.super }}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+{% endblock stylesheet %}
+{% block header %}
+<header class="profile-edit-header profile-edit-header-spec">
+  <div class="container">
+    <a href="" onClick="javascript:history.go(-1);"><img class="back-btn" src="{% static 'images/back.png' %}" alt="" /></a>
+
+    <img class="profile-edit-image" src="{% static 'images/profile_demo.png' %}" alt="">
+    <br>
+    <span class="edit-profile-span">Sunny Arora</span>
+  <br><span class="edit-profile-span-two">(CTO Linkedin)</span>
+
+    <div class="contains-subscribe-btn">
+      <a class="waves-effect  grey lighten-5 btn subscribe-btn-detail-page">Subscribe</a>
+      <a href="" class="share-icon-detail"><img  src="{% static 'images/likd.png' %}" alt="" height="25" width="25"></a>
+      <a href="" class="share-icon-detail share-icon-detail1"><img  src="{% static 'images/twee.png' %}" alt="" height="25" width="25"></a>
+    </div>
+  </div>
+
+</header>
+{% endblock header %}
+
+{% block body %}
+  <section id="profile-edit-body">
+    <div class="container">
+      <div class="chief-summary">
+        <h5>About Sunny</h5>
+        <p>
+          Daniel Newman is the CEO of Broadsuite Media Group and President of V3B. An experienced C-Level Executive passionate about Strategy who also loves working with entrepreneurs and their small and mid-sized businesses. Prior to launching BroadSuite and V3B, Daniel served as the co-founder and CEO of EC3, a quickly growing hosted IT and Communication services provider. Before that, Daniel held several prominent leadership roles including serving as CEO of United Visual, parent company to United Visual Systems, United Visual Productions, and United GlobalComm; a family of companies focused on Unified Communications and Audio Visual Technologies.
+
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="previous-work-ex">
+    <div class="container">
+      <h5>Previous Work Experience</h5>
+      <div class="row">
+      <div class="col s12 m5">
+        <div class="card-panel my-teal">
+          <span class="white-text">
+            Unlike unicorns, which, for all their popularity, tend to rely on risky and experimental business models, dragons are established companies that continue to leverage their original startup mentality to systematically innovate their way to profitability.
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col s12 m5">
+      <div class="card-panel my-teal">
+        <span class="white-text">
+          Unlike unicorns, which, for all their popularity, tend to rely on risky and experimental business models, dragons are established companies that continue to leverage their original startup mentality to systematically innovate their way to profitability.
+        </span>
+      </div>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <section class="all-blogs-by-ceo">
+    <div class="container">
+      <h5>
+      <a href="{% url 'profile_view_all_blog' %}">  View All blogs by Sunny</a>
+      </h5>
+      <div class="col s12 m7">
+        <!-- <div class="card">
+          <div class="card-image">
+            <a href="{% url 'blog_detail_page' %}"><img src="{% static 'images/blog_img1.jpg' %}"></a>
+            <span class="card-title">How to make good decisions.</span>
+          </div>
+          <div class="card-content">
+            <p>By Daniel Newman, CEO, Broadsuite Media Group</p>
+          </div>
+
+          <div class="card-action">
+            <a class="waves-effect waves-light btn full-article-btn" href="{% url 'blog_detail_page' %}">Full blog</a>
+            <a class="waves-effect waves-light btn summary-btn modal-trigger" href="#modal1">Summary</a>
+          </div>
+        </div>
+      </div> -->
+      <div class="fixed-action-btn vertical click-to-toggle" style="bottom: 45px; right: 24px;">
+       <a class="btn-floating btn-large red modal-trigger" href="#modal1">
+         <!-- <i class="material-icons">menu</i> -->
+         <img src="{% static 'images/handshake.png' %}" style="position:relative; top:13px;"alt="">
+       </a>
+
+     </div>
+     <!-- Modal Trigger -->
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h5>Connect with Sunny</h5>
+      <div class="inside-modal-body">
+        <div class="inside-modal-body-sub">
+           <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">email</i></a>
+
+        </div>
+        <div class="inside-modal-body-sub">
+          <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">phone</i></a>
+        </div>
+
+        <div class="inside-modal-body-sub inside-modal-body-sub-spec">
+          <a class="btn-floating btn-large waves-effect waves-light red"><i class="fa fa-skype" style="color:#fff;" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="inside-modal-body-sub inside-modal-body-sub-spec">
+          <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">chat</i></a>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+      <!-- <spa>View more</a></spa> -->
+    </div>
+  </section>
+{% endblock body %}
+
+{% block scripts %}
+  {{ block.super }}
+  <script>
+    $('.subscribe-btn-detail-page').on('click', function(e)
+    {
+      $(this).text('Unsubscribe');
+      $(this).css({'background-color':'#ff7043!important'});
+
+    });
+    $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+  </script>
+{% endblock scripts %}

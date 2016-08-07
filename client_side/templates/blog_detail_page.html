@@ -6,7 +6,92 @@
 {% endblock header %}
 
 {% block body %}
+<div class="container" style="margin:10px;font-size:20px;">
+  <h5>Five Surprising Traits Top CIOs Need</h5>
+  <p class="blog-content-p">
+    By Daniel Newman, CEO, Broadsuite Media Group
+  </p>
+<p class="blog-content-new-p">
 
+  This article is by Featured Blogger Daniel Newman from his LinkedIn page.
+  Being a successful chief information officer (CIO) requires certain attributes, but you may be surprised that some of the most important ones have little to do with technology. Customer-centric business models are leading today’s industry, essentially requiring that tech expertise is equally matched with people skills.
+  Just recently, I explained how CIOs are the glue holding together business technology, especially in the ever-changing digital landscape. Wondering why that is? It’s because of these top five traits that the most successful CIOs rely on to ensure their companies’ competitive edge.
+</p>
+<b>#5: Experienced Self-Awareness</b>
+<p class="blog-content-new-p">
+  The combination of emotional intelligence and self-awareness is the bedrock of good judgment and risk management. It is also helpful for recognizing and hiring talent. Experienced self-awareness means basing your decisions on past failures, challenges, and successes. Self-awareness alone is a crucial trait for success; mix in experience, and you are better able to help those around you succeed.
+  CIOs who rely on their previous experience to source and identify new talent—as well as anticipate future needs—will successfully hire industry thought leaders. The best CIOs maximize their talents and leverage their weaknesses into strengths.
+</p>
+
+<b>#4: Dedication to Lifelong Learning</b>
+<p class="blog-content-new-p">
+  In a world where what worked yesterday is not relevant today, a top CIO has to have a natural appetite for knowledge. This ability goes hand in hand with self-awareness, because leadership and people skills are essential to integrate or manage technology effectively. Not only do you have to master the latest technologies consistently, you must have the ability to lead others to use the technology as well.
+  Being a constant learner is more than having the resources to learn about new technologies. It’s about the willingness to keep an open mind, to optimize new things to their fullest potential, and to teach others how to do so as well. A CIO has to want to be a constant learner.
+</p>
+<b>#3: People-Focused Outlook</b>
+<p class="blog-content-new-p">
+  Many organizations have standout structures, technology, and assets – yet still fail because they lack human capital. The greatest companies are built on good judgment and risk management—two things that are done through people. Top CIOs must have the ability to lead, motivate, and recognize the talents of people who work for them. Having a keen eye for someone’s competencies and failures allows you to recruit the right kind of talent for your business.
+  Being people-focused will help you staff your company according to your exact needs, as well as relate to your clients on a more personal level. Much has been written about the importance of personalization and customization in today’s industry. Customers want to feel cared for by your company and in return, you’ll earn their loyalty.
+
+</p>
+
+</div>
+<div class="container">
+  By
+  <div class="chip chip-up">
+    <a href="{% url 'profile_detail_page' %}"><img src="{% static 'images/profile_demo.png' %}" alt="Contact Person">
+    Sunny Arora</a>
+
+  </div>
+  <div class="chip-down">
+    <a class="waves-effect waves-light btn">button</a>
+  </div>
+</div>
+<div class="share-icons">
+  <div class="container">
+    <div class="blog-detail-btn-wrapper">
+      <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+
+        <ul>
+          <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+          <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+          <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+          <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+        <a class="btn-floating btn-large red" style="width:38px; height:38px;">
+          <i class="material-icons" style="line-height:35px;" >add</i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div id="disqus_thread"></div>
+</div>
+
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//s-suite.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    <!--Import jQuery before materialize.js-->
+
+    <script id="dsq-count-scr" src="//s-suite.disqus.com/count.js" async></script>
 {% endblock body %}
 
 

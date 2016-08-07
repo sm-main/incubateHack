@@ -16,3 +16,9 @@ def all_blog_page(request):
 
 def blog_detail_page(request):
     return render(request, 'blog_detail_page.html')
+
+def profile_detail_page(request):
+    return render(request, 'profile_detail_page.html')
+
+def profile_view_all_blog(request):
+    return render(request, 'all_blog_page.html')

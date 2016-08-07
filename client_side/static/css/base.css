@@ -117,7 +117,12 @@ top: 70px;
 
 .signup-button
 {
-  background-color: #FE5F55;
+  background-color: #FE5F55!important;
+}
+.submit-button-signup,
+.submit-button-login
+{
+  width: 100%;
 }
 .button-container
 {

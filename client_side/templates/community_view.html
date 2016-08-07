@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+<section id="community-view-section">
+  <div class="container">
+  <div class="row">
+       <div class="col s12 m7">
+         <div class="card">
+           <div class="card-image">
+               <a href="{% url 'community_single_page' %}"><img src="https://straighttalk.hcltech.com/sites/default/files/styles/group_icon/public/digital_straightalk-05.png?itok=2dkpXBSY"></a>
+             <span class="card-title">Beyond Digital Straight Talk</span>
+           </div>
+           <div class="card-content">
+             <p>This is an exclusive group of C-level digital leaders, specifically designed for the dynamic exchange of peer-to-peer professional insights among members that will Provide...  <a href="{% url 'community_single_page' %}">view more</a></p>
+           </div>
+           <div class="card-action">
+             <span>Members: 100 | Posts:74</span>
+             <a href="{% url 'community_single_page' %}">JOIN</a>
+           </div>
+         </div>
+       </div>
+     </div>
+
+  </div>
+</section>
+
+{% endblock body %}

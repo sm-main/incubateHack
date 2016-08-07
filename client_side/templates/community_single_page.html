@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+  <section id="community-single-page">
+    <div class="container">
+      <div class="row">
+       <div class="col s12 m6">
+         <div class="card">
+           <div class="card-content">
+             <span class="card-title">Beyond Digital Straight Talk</span>
+             <p>Why join this community?</p>
+             <p>This is an exclusive group of C-level digital leaders,
+               specifically designed for the dynamic exchange of peer-to-peer professional
+               insights among.... <a class="modal-trigger" href="#modal1">read more</a></p>
+
+              <!-- Modal Structure -->
+              <div id="modal1" class="modal">
+                <div class="modal-content">
+                  <h4><a href="">Join</a></h4>
+
+                  <p>This is an exclusive group of C-level digital leaders, specifically designed for the dynamic exchange of peer-to-peer professional insights among members that will
+
+Provide solutions to their technology and business challenges
+Advance their careers
+Drive business results for their organizations
+
+Membership in the community is by invitation or prior approval only, ensuring that discourse is at the highest level and generates thinking that leapfrogs the “Digitalization 2.0” ideas currently in circulation. Members are admitted based not on their title – for example, Chief Digital Officer – but on their high-level responsibility for digital strategy or operations, whatever their function.
+
+Other benefits of membership include
+
+Opportunities for members to strengthen their professional networks through interactions with fellow members
+Selected information on currents trends and topics selected by Straight Talk editors
+The opportunity to work with Straight Talk’s expert editorial team on packaging ideas for publication with an external audience, thus raising a members’ personal thought leadership profile
+A complimentary subscription to CIO Straight Talk or CTO Straight Talk magazine, as well as early access to articles that will appear in upcoming issues</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                </div>
+              </div>
+           </div>
+           <div class="card-action">
+             <a href="#">Join</a>
+             <a href="#">Recommend</a>
+             <a href="">Share</a>
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+  </section>
+{% endblock body %}
+
+{% block scripts %}
+  {{ block.super }}
+  <script>
+  $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal-trigger').leanModal();
+    });
+
+  </script>
+{% endblock scripts %}

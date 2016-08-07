@@ -22,3 +22,12 @@ def profile_detail_page(request):
 
 def profile_view_all_blog(request):
     return render(request, 'all_blog_page.html')
+
+def act_now_page(request):
+    return render(request, 'act_now_page.html')
+
+def community_view(request):
+    return render(request, 'community_view.html')
+
+def community_single_page(request):
+    return render(request, 'community_single_page.html')    

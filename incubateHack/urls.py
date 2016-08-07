@@ -26,4 +26,7 @@ urlpatterns = [
     url(r'^all-blog/$', 'general.views.all_blog_page', name='all_blog_page'),
     url(r'^blog-detail-page/$', 'general.views.blog_detail_page', name='blog_detail_page'),
     url(r'^profile-detail-all-blog/$', 'general.views.profile_view_all_blog', name='profile_view_all_blog'),
+    url(r'^act-now-page/$', 'general.views.act_now_page', name='act_now_page'),
+    url(r'^community/$', 'general.views.community_view', name='community_view'),
+    url(r'^community-single-page/$', 'general.views.community_single_page', name='community_single_page')
 ]

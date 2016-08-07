@@ -181,6 +181,23 @@ top: 70px;
 {
   font-size: 14px;
 }
+.fixed-action-btn
+ {
+   padding-bottom: 10px!important;
+   position: relative;
+   bottom: 0px!important;
+   right: 0px!important;
+ }
+
+ .fixed-action-btn.horizontal ul
+ {
+   top: 10px;
+   right: 0px!important;
+ }
+#my-strong-id
+ {
+   right:35px!important;
+ }
 .blog-detail-btn-wrapper > .fixed-action-btn
 {
   text-align: right;

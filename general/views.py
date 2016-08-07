@@ -32,3 +32,6 @@ def community_view(request):
 
 def community_single_page(request):
     return render(request, 'community_single_page.html')
+
+def all_notes(request):
+    return render(request, 'all_notes.html')

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
      <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 
-    
+
     {% endblock stylesheet %}
   </head>
   <body>
@@ -50,10 +50,26 @@
         <div class="row">
           <div class="col s12">
             <ul class="tabs">
-              <li class="tab col s3"><a href="#test1">My Feed</a></li>
-              <li class="tab col s3"><a class="active" href="#test2">Events</a></li>
-              <li class="tab col s3 "><a href="#test3">Webinars</a></li>
-              <li class="tab col s3"><a href="#test4">Community</a></li>
+              {% if active_all_blog %}
+              <li class="tab col s3"><a target="_self" class="active" href="{% url 'all_blog_page' %}">My Feed</a></li>
+              {% else %}
+              <li class="tab col s3"><a target="_self" href="{% url 'all_blog_page' %}">My Feed</a></li>
+              {% endif %}
+              {% if active_events %}
+              <li class="tab col s3"><a target="_self" class="active" href="#test2">Events</a></li>
+              {% else %}
+              <li class="tab col s3"><a target="_self" href="#test2">Events</a></li>
+              {% endif %}
+              {% if active_webinars %}
+              <li class="tab col s3 "><a target="_self" class="active" href="#test3">Webinars</a></li>
+              {% else %}
+              <li class="tab col s3 "><a target="_self" href="#test3">Webinars</a></li>
+              {% endif %}
+              {% if active_community %}
+              <li class="tab col s3"><a target="_self" class="active" href="{% url 'community_view' %}">Community</a></li>
+              {% else %}
+              <li class="tab col s3"><a target="_self" href="{% url 'community_view' %}">Community</a></li>
+              {% endif %}
             </ul>
           </div>
         </div>

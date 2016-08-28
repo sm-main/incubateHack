@@ -29,5 +29,7 @@ urlpatterns = [
     url(r'^act-now-page/$', 'general.views.act_now_page', name='act_now_page'),
     url(r'^community/$', 'general.views.community_view', name='community_view'),
     url(r'^community-single-page/$', 'general.views.community_single_page', name='community_single_page'),
-    url(r'^all-notes/$', 'general.views.all_notes', name='all_notes')
+    url(r'^all-notes/$', 'general.views.all_notes', name='all_notes'),
+    url(r'^events/$', 'general.views.events_view', name='events_view'),
+    url(r'^webinar/$', 'general.views.webinar_view', name='webinar_view')
 ]

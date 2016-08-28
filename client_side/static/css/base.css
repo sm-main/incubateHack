@@ -9,6 +9,22 @@ header
 {
   padding-top: 30px;
 }
+
+.clearfix
+{
+  clear: both;
+}
+.tabs
+{
+  overflow-x: auto;
+  overflow-y: auto;;
+  background-color:#333745;
+}
+.second-header
+{
+  background-color: #333745;
+  z-index: 2000!important;
+}
 header > .container
 {
   position: relative;

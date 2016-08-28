@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from reportlab.pdfgen import canvas
+# from reportlab.pdfgen import canvas
 from django.http import HttpResponse
 # Create your views here.
 
@@ -42,7 +42,7 @@ def webinar_view(request):
 def events_view(request):
     active_events = True
     context = {'active_events':active_webinar}
-    return render(requset, 'events_view.html', context)   
+    return render(requset, 'events_view.html', context)
 
 
 def community_single_page(request):
